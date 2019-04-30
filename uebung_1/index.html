@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<meta charset="utf-8" />
-		<title>Your page title here :)</title>
-		<meta name="description" content="Weather App" />
-		<meta name="author" content="David Reindl" />
+<head>
+    <meta charset="utf-8"/>
+    <title>Your page title here :)</title>
+    <meta name="description" content="Weather App"/>
+    <meta name="author" content="David Reindl"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link
+            href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+            rel="stylesheet"
+            type="text/css"
+    />
 
-		<!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="src/css/normalize.css"/>
+    <link rel="stylesheet" href="src/css/style.css"/>
 
-		<!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link
-			href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
-			rel="stylesheet"
-			type="text/css"
-		/>
+    <link rel="icon" type="image/ico" href="src/assets/favicon.png"/>
 
-		<!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link rel="stylesheet" href="src/css/normalize.css" />
-		<link rel="stylesheet" href="src/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="src/js/currencies.js"></script>
+    <script type="text/javascript" src="src/js/loadCanvas.js"></script>
+    <script type="text/javascript" src="src/js/javascript.js"></script>
 
-		<!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<link rel="icon" type="image/png" href="src/assets/favicon.png" />
+</head>
+<body>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript" src="src/js/currencies.js"></script>
-	</head>
-	<body>
-		<!-- Primary Page Layout 
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div class="container">
-			<div class="row">
-				<div class="one-full column" style="margin-top: 25%">
-					<form>
-						<div class="u-full-width">
-							<h4>Currencys</h4>
-							<label for="currencies">Select Currency</label>
-							<select id="currencies"> </select>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	</body>
+<div class="container">
+    <section class="row" id="canvas">
+        <header>
+            <h2>Canvas drawing</h2>
+        </header>
+        <article>
+            <p>Click the Button and watch the favicon.</p>
+
+            <button id="loadBtn" onclick="draw()">Load</button>
+
+            <label id="lbl_fav"></label>
+            <canvas id="fav" width="16" height="16"></canvas>
+        </article>
+
+
+    </section>
+    <hr/>
+    <section class="row" id="ajax">
+        <div class="one-full column">
+            <form>
+                <div class="u-full-width">
+                    <h2>Ajax</h2>
+                    <label for="currencies">Select Currency</label>
+                    <select id="currencies"> </select>
+                </div>
+            </form>
+        </div>
+    </section>
+    <hr/>
+    <section class="row" id="webworker">
+        <h2>Webworker</h2>
+        <p>Absolute spectacular timer to demonstrate webworker, which was totally my own idea and not w3school's:
+            <label id="timer">a</label></p>
+    </section>
+</div>
+
+</body>
 </html>
