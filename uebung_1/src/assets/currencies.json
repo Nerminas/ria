@@ -1,20 +1,47 @@
 {
-	"USD": {
-		"symbol": "$",
-		"name": "US Dollar",
-		"symbol_native": "$",
-		"decimal_digits": 2,
-		"rounding": 0,
-		"code": "USD",
-		"name_plural": "US dollars"
-	},
-	"EUR": {
-		"symbol": "€",
-		"name": "Euro",
-		"symbol_native": "€",
-		"decimal_digits": 2,
-		"rounding": 0,
-		"code": "EUR",
-		"name_plural": "euros"
-	}
+  "USD": {
+    "symbol": "$",
+    "name": "US Dollar",
+    "symbol_native": "$",
+    "decimal_digits": 2,
+    "rounding": 0,
+    "code": "USD",
+    "name_plural": "US dollars"
+  },
+  "EUR": {
+    "symbol": "€",
+    "name": "Euro",
+    "symbol_native": "€",
+    "decimal_digits": 2,
+    "rounding": 0,
+    "code": "EUR",
+    "name_plural": "euros"
+  },
+  "JPY": {
+    "symbol": "¥",
+    "name": "Japanese Yen",
+    "symbol_native": "￥",
+    "decimal_digits": 0,
+    "rounding": 0,
+    "code": "JPY",
+    "name_plural": "Japanese yen"
+  },
+  "AUD": {
+    "symbol": "AU$",
+    "name": "Australian Dollar",
+    "symbol_native": "$",
+    "decimal_digits": 2,
+    "rounding": 0,
+    "code": "AUD",
+    "name_plural": "Australian dollars"
+  },
+  "CNY": {
+    "symbol": "CN¥",
+    "name": "Chinese Yuan",
+    "symbol_native": "CN¥",
+    "decimal_digits": 2,
+    "rounding": 0,
+    "code": "CNY",
+    "name_plural": "Chinese yuan"
+  }
 }

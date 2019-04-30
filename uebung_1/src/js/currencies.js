@@ -1,12 +1,29 @@
-function loadJSON(callback) {
+class Currency{
+    constructor(code, name, symbol){
+        this.code = code;
+        this.name = name;
+        this.symbol = symbol;
+    }
+}
 
+Currency.prototype.getCode = function (){
+    return this.code;
+}
+
+Currency.prototype.getName = function (){
+    return this.name;
+}
+
+Currency.prototype.getSymbol = function (){
+    return this.symbol;
+}
+
+function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'src/assets/currencies.json', true); // Replace 'my_data' with the path to your file
+    xobj.open('GET', 'src/assets/currencies.json', true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but
-            // simply returns undefined in asynchronous mode
             callback(xobj.responseText);
         }
     };
@@ -14,20 +31,14 @@ function loadJSON(callback) {
 }
 function init() {
     loadJSON(function (response) {
-        console.log("Test");
-        // Parse JSON string into object let jsonData = JSON.parse(response);
-
-        console.log("Test");
         const jsonData = $.parseJSON(response);
-
-        console.log(jsonData);
-
         let $select = $('#currencies');
         $.each(jsonData, function (index, o) {
             console.log(o);
+            let curr = new Currency(o.code, o.name, o.symbol);
             var $option = $("<option/>")
-                .attr('value', o.code)
-                .text(o.name);
+                .attr('value', curr.getCode())
+                .text(curr.getSymbol() + " | " + curr.getName());
             $select.append($option);
         })
     });
